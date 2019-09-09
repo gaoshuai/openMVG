@@ -30,7 +30,7 @@ void openMVG::sfm::ViewPriors::save( Archive & ar ) const
   }
 
   // Pose rotation prior
-  /*
+
   if (b_use_pose_rotation_)
   {
     ar( cereal::make_nvp( "use_pose_rotation_prior", b_use_pose_rotation_ ) );
@@ -43,7 +43,6 @@ void openMVG::sfm::ViewPriors::save( Archive & ar ) const
     };
     ar( cereal::make_nvp( "rotation", mat ) );
   }
-  */
 }
 
 template <class Archive>
@@ -68,7 +67,6 @@ void openMVG::sfm::ViewPriors::load( Archive & ar )
   }
 
   // Pose rotation prior
-  /*
   try
   {
     ar( cereal::make_nvp( "use_pose_rotation_prior", b_use_pose_rotation_ ) );
@@ -85,7 +83,6 @@ void openMVG::sfm::ViewPriors::load( Archive & ar )
     // if it fails just use a default settings
     b_use_pose_rotation_ = false;
   }
-  */
 }
 
 CEREAL_REGISTER_TYPE_WITH_NAME( openMVG::sfm::ViewPriors, "view_priors" );
